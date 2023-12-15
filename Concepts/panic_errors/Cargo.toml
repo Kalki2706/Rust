@@ -1,0 +1,11 @@
+[package]
+name = "panic_errors"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[panic_errors.release]
+panic = "abort"
+
+[dependencies]
