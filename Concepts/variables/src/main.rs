@@ -33,4 +33,11 @@ fn another_function() {
     // spaces = spaces.len();
 
     // println!("{spaces}");
+
+    // <---- A variable cannot be assigned to a value of a different type than its original type ---->
+
+    let mut x: u32 = 1;
+    x = "Hello world";
+  
+    println!("{x}");
 }
