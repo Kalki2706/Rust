@@ -37,7 +37,7 @@ fn another_function() {
     // <---- A variable cannot be assigned to a value of a different type than its original type ---->
 
     let mut x: u32 = 1;
-    x = "Hello world";
+    x = "Hello world"; // change this value in integer and you'll not get any error.
   
     println!("{x}");
 }
