@@ -91,11 +91,28 @@ fn main() {
         
         println!("Success!");
     }
+
     {
     // 7. Fix the warning: unused variable: 'x'
         #[allow(unused_variables)]
         let _x: i32 = 1;
         
     // SOLUTION: added #(allow[unused_variables)] and clippy lints so the warning will be not generated.
+    }
+
+// DESTRUCTURING
+// We can use a pattern with let to destructure a tuple to separate variables.
+
+    {
+    // Fix the error below with least amount of modification
+        let (mut x, y) = (1, 2);
+        x += 2;
+        
+        assert_eq!(x, 3);
+        assert_eq!(y, 2);
+        
+        println!("Success!");
+
+    // SOLUTION: Add mut keyword before x to make it mutable.
     }
 }
