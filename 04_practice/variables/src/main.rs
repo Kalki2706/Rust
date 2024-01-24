@@ -115,4 +115,20 @@ fn main() {
 
     // SOLUTION: Add mut keyword before x to make it mutable.
     }
+
+// DESTRUCTURING ASSIGNMENTS
+// Introduced in Rust 1.59: You can now use tuple, slice, and struct patterns as the left-hand side of an assignment.
+// Note: the feature Destructuring assignments need 1.59 or higher Rust version
+
+    {
+        let (x, y);
+        (x, ..) = (3, 4);
+        [.., y] = [1, 2];
+    // Fill the blank to make the code work
+        assert_eq!([x,y], [3, 2]);
+    
+        println!("Success!");
+
+    // SOLUTION: give value 3 and 4 in an array as destructured in above lines.
+    }
 }
