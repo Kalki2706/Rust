@@ -56,4 +56,46 @@ fn main() {
 
     // SOLUTION: called define_x() outside of it's block
     }
+
+// SHADOWING
+// You can declare a new variable with the same name as a previous variable, here we can say the first one is shadowed by the second one.
+
+    {
+    // 5. Only modify `assert_eq!` to make the `println!` work(print `42` in terminal)
+
+        let x: i32 = 5;
+        {
+            let x = 12;
+            assert_eq!(x, 12);
+        }
+
+        assert_eq!(x, 5);
+
+        let x = 42;
+        println!("{}", x); // Prints "42".
+
+    // SOLUTION: Moved assert_eq with each other.
+    }
+
+    {
+    // 6. Remove a line in the code to make it compile
+        let mut _x: i32 = 1;
+        _x = 7;
+        // Shadowing and re-binding
+        _x += 3;
+        
+        
+        let _y: i32 = 4;
+        // Shadowing
+        let _y: &str = "I can also be bound to text!"; 
+        
+        println!("Success!");
+    }
+    {
+    // 7. Fix the warning: unused variable: 'x'
+        #[allow(unused_variables)]
+        let _x: i32 = 1;
+        
+    // SOLUTION: added #(allow[unused_variables)] and clippy lints so the warning will be not generated.
+    }
 }
